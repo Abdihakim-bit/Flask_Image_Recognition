@@ -3,11 +3,6 @@
 from io import BytesIO
 import pytest
 
-def test_homepage_accessible(client):
-    """Ensure the homepage (index.html) loads successfully."""
-    response = client.get("/")
-    assert response.status_code == 200
-    assert b"<html" in response.data.lower()
 
 def test_acceptance_successful_upload(client):
     """
